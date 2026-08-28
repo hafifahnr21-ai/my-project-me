@@ -1423,3 +1423,182 @@ to{
 
 }
 
+/* =========================
+UNDANGAN ULANG TAHUN
+========================= */
+
+.welcome{
+
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+
+}
+
+.undangan{
+
+
+width:90%;
+
+max-width:600px;
+
+padding:45px 35px;
+
+background:rgba(255,255,255,0.10);
+
+border:2px solid rgba(255,182,230,0.5);
+
+border-radius:30px;
+
+box-shadow:
+    0 0 30px rgba(255,105,180,.3),
+    inset 0 0 30px rgba(255,255,255,.05);
+
+backdrop-filter:blur(8px);
+
+
+}
+
+.label-undangan{
+
+
+color:#ffd6ff;
+
+font-size:18px;
+
+letter-spacing:3px;
+
+margin-bottom:25px;
+
+
+}
+
+.undangan h1{
+
+
+font-size:42px;
+
+margin:10px 0;
+
+color:#ffb6e6;
+
+
+}
+
+.undangan h2{
+
+
+font-size:36px;
+
+margin:10px 0 20px;
+
+color:white;
+
+text-shadow:
+    0 0 10px pink,
+    0 0 20px purple;
+
+
+}
+
+.garis{
+
+
+color:#ffb6e6;
+
+font-size:20px;
+
+letter-spacing:8px;
+
+margin:20px 0;
+
+
+}
+
+.isi-undangan{
+
+
+color:#fff0ff;
+
+font-size:18px;
+
+line-height:1.8;
+
+
+}
+
+.umur{
+
+
+margin-top:25px;
+
+color:#ffb6e6;
+
+font-size:24px;
+
+font-weight:bold;
+
+
+}
+
+.tanggal{
+
+
+color:#ead1ff;
+
+font-size:16px;
+
+margin-top:5px;
+
+
+}
+
+.tombol-mulai{
+
+
+margin-top:30px !important;
+
+padding:14px 45px !important;
+
+border:none;
+
+border-radius:35px;
+
+background:#9b00ff;
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:
+    0 0 20px purple;
+
+transition:.3s;
+
+
+}
+
+.tombol-mulai:hover{
+
+
+background:#ff4fd8;
+
+transform:scale(1.08);
+
+box-shadow:
+    0 0 30px pink;
+
+
+}
