@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <meta charset="UTF-8">
     <title>happy birthday nur hafifah</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-```
 <div class="container">
 
     <h1>happy birthday nur hafifah yang ke 20 💜</h1>
 
-    <!-- Musik -->
+    <!-- MUSIK -->
     <audio id="musik" loop>
         <source src="musik/strawberry.mp3" type="audio/mpeg">
     </audio>
 
+    <!-- MENU -->
     <div class="menu">
 
-        <button onclick="putarMusik()">🎵 Putar Musik</button>
+        <button onclick="putarMusik()">
+            🎵 Putar Musik
+        </button>
 
-        <button onclick="tampilRumah()">🏠 Rumah</button>
+        <button onclick="tampilRumah()">
+            🏠 Rumah
+        </button>
 
-        <button onclick="tampilGaleri()">📷 Galeri</button>
+        <button onclick="tampilGaleri()">
+            📷 Galeri
+        </button>
 
-        <button onclick="tampilTentang()">👤 Tentang Aku</button>
+        <button onclick="tampilTentang()">
+            👤 Tentang Aku
+        </button>
 
-        <button onclick="tampilUcapan()">💌 Ucapan</button>
+        <button onclick="tampilUcapan()">
+            💌 Surat untuk Nuyy
+        </button>
+
+        <button onclick="tampilDaftarUcapan()">
+            📖 Ucapan untuk Nur Hafifah
+        </button>
 
     </div>
 
 
-    <!-- Isi website -->
+    <!-- ISI WEBSITE -->
     <div id="isi">
 
         <h2>🏠 Rumah</h2>
@@ -53,8 +67,12 @@
 
 </div>
 
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- JAVASCRIPT -->
 <script src="script.js"></script>
-```
 
 </body>
 
