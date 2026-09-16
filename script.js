@@ -54,104 +54,162 @@ Semoga hari ini menjadi hari yang indah.
 
 function tampilGaleri(){
 
-document.getElementById("isi").innerHTML=`
+    document.getElementById("isi").innerHTML = `
 
-<h2 class="judul-galeri">
-📷 Galeri Kenangan 💜
-</h2>
+        <h2>📷 Galeri Kenangan 💜</h2>
 
+        <div class="galeri">
 
-<div class="galeri">
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto1.jpg">
+                <p>💜 Kenangan 1</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto2.webp">
+                <p>🌸 Kenangan 2</p>
+            </div>
 
-<div class="card">
-<img src="img/poto1.jpg.jpg" onclick="besar(this)">
-<p>💜 Kenangan 1</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto3.webp">
+                <p>💜 Kenangan 3</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto4.webp">
+                <p>🌸 Kenangan 4</p>
+            </div>
 
-<div class="card">
-<img src="img/poto2.webp.webp" onclick="besar(this)">
-<p>🌸 Kenangan 2</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto5.jpg">
+                <p>💜 Kenangan 5</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto6.jpg">
+                <p>🌸 Kenangan 6</p>
+            </div>
 
-<div class="card">
-<img src="img/poto3.webp.webp" onclick="besar(this)">
-<p>✨ Kenangan 3</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto7.jpg">
+                <p>💜 Kenangan 7</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto8.jpg">
+                <p>🌸 Kenangan 8</p>
+            </div>
 
-<div class="card">
-<img src="img/poto4.webp.webp" onclick="besar(this)">
-<p>💕 Kenangan 4</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto9.webp">
+                <p>💜 Kenangan 9</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto10.webp">
+                <p>🌸 Kenangan 10</p>
+            </div>
 
-<div class="card">
-<img src="img/poto5.jpg.jpg" onclick="besar(this)">
-<p>🎈 Kenangan 5</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto11.webp">
+                <p>💜 Kenangan 11</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto12.webp">
+                <p>🌸 Kenangan 12</p>
+            </div>
 
-<div class="card">
-<img src="img/poto6.jpg.jpg" onclick="besar(this)">
-<p>🎂 Kenangan 6</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto13.jpg">
+                <p>💜 Kenangan 13</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto14.jpg">
+                <p>🌸 Kenangan 14</p>
+            </div>
 
-<div class="card">
-<img src="img/poto7.jpg.jpg" onclick="besar(this)">
-<p>🌷 Kenangan 7</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto15.jpg">
+                <p>💜 Kenangan 15</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto16.jpg">
+                <p>🌸 Kenangan 16</p>
+            </div>
 
-<div class="card">
-<img src="img/poto8.jpg.jpg" onclick="besar(this)">
-<p>💝 Kenangan 8</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto17.jpg">
+                <p>💜 Kenangan 17</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto18.jpg">
+                <p>🌸 Kenangan 18</p>
+            </div>
 
-<div class="card">
-<img src="img/poto9.webp.webp" onclick="besar(this)">
-<p>🌹 Kenangan 9</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto19.jpeg">
+                <p>💜 Kenangan 19</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto20.jpeg">
+                <p>🌸 Kenangan 20</p>
+            </div>
 
-<div class="card">
-<img src="img/poto10.webp.webp" onclick="besar(this)">
-<p>📸 Kenangan 10</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto21.jpeg">
+                <p>💜 Kenangan 21</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto22.jpeg">
+                <p>🌸 Kenangan 22</p>
+            </div>
 
-<div class="card">
-<img src="img/poto11.webp.webp" onclick="besar(this)">
-<p>💖 Kenangan 11</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto23.jpeg">
+                <p>💜 Kenangan 23</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto24.jpeg">
+                <p>🌸 Kenangan 24</p>
+            </div>
 
-<div class="card">
-<img src="img/poto12.webp.webp" onclick="besar(this)">
-<p>🎉 Kenangan 12</p>
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto25.jpeg">
+                <p>💜 Kenangan 25</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto26.jpeg">
+                <p>🌸 Kenangan 26</p>
+            </div>
 
-</div>
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto27.jpeg">
+                <p>💜 Kenangan 27</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto28.jpeg">
+                <p>🌸 Kenangan 28</p>
+            </div>
 
+            <div class="card" onclick="besar(this)">
+                <img src="img/poto29.jpeg">
+                <p>💜 Kenangan 29</p>
+            </div>
 
-<div id="popup" onclick="tutup()">
+        </div>
 
-<img id="gambarBesar">
-
-</div>
-
-
-`;
+    `;
 
 }
-
-
 
 
 // =======================
