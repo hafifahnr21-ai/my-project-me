@@ -214,22 +214,27 @@ function tampilGaleri(){
 // FOTO BESAR
 // =======================
 
-function besar(gambar){
+function besar(element){
 
-document.getElementById("popup").style.display="flex";
+    const gambar = element.querySelector("img");
 
-document.getElementById("gambarBesar").src=gambar.src;
+    if (!gambar) return;
 
+    const overlay = document.createElement("div");
+
+    overlay.className = "foto-besar";
+
+    overlay.innerHTML = `
+        <img src="${gambar.src}">
+        <span>✕</span>
+    `;
+
+    document.body.appendChild(overlay);
+
+    overlay.onclick = function(){
+        overlay.remove();
+    };
 }
-
-
-
-function tutup(){
-
-document.getElementById("popup").style.display="none";
-
-}
-
 
 
 
