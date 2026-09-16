@@ -218,24 +218,23 @@ function besar(element){
 
     const gambar = element.querySelector("img");
 
-    if (!gambar) return;
+    if(!gambar) return;
 
-    const overlay = document.createElement("div");
+    const popup = document.createElement("div");
 
-    overlay.className = "foto-besar";
+    popup.className = "foto-besar";
 
-    overlay.innerHTML = `
+    popup.innerHTML = `
         <img src="${gambar.src}">
         <span>✕</span>
     `;
 
-    document.body.appendChild(overlay);
+    document.body.appendChild(popup);
 
-    overlay.onclick = function(){
-        overlay.remove();
+    popup.onclick = function(){
+        popup.remove();
     };
 }
-
 
 
 // =======================
