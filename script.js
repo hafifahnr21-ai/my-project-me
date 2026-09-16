@@ -1,4 +1,16 @@
 // =======================
+// SUPABASE
+// =======================
+
+const SUPABASE_URL =  "https://cviurouilbeefwbicdsh.supabase.co";
+const SUPABASE_KEY = "sb_publishable_mgy-J4BYuyOCTcWjH-mMqQ_KWwsi41d";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+// =======================
 // MUSIK
 // =======================
 
@@ -298,116 +310,78 @@ dan banyak cerita indah yang bisa dikenang. 💜✨
 // UCAPAN + AMPLOP
 // =======================
 
-
 function tampilUcapan(){
 
+    index = 0;
 
-index = 0;
+    document.getElementById("isi").innerHTML = `
 
+        <div class="amplop" onclick="bukaSurat()">
 
-document.getElementById("isi").innerHTML=`
+            <div class="tutup-amplop"></div>
 
-<div class="amplop" onclick="bukaSurat()">
+            <div class="isi-amplop">
+                💌
+            </div>
 
+        </div>
 
+        <p class="klik">
+            Klik amplop untuk membuka surat 💜
+        </p>
 
-<div class="tutup-amplop"></div>
+        <div id="surat" class="surat">
 
+            <h2>
+                💌 Untuk Nur Hafifah
+            </h2>
 
+            <p id="pesan"></p>
 
-<div class="isi-amplop">
+        </div>
 
-💌
-
-</div>
-
-
-</div>
-
-
-
-<p class="klik">
-Klik amplop untuk membuka surat 💜
-</p>
-
-
-
-<div id="surat" class="surat">
-
-
-<h2>
-💌 Untuk Nur Hafifah
-</h2>
-
-
-<p id="pesan"></p>
-
-
-</div>
-
-
-`;
+    `;
 
 }
-
-
-
 
 
 // =======================
 // BUKA SURAT
 // =======================
 
-
 function bukaSurat(){
 
+    let amplop = document.querySelector(".amplop");
+    let surat = document.getElementById("surat");
 
-let amplop=document.querySelector(".amplop");
+    if(!amplop || !surat){
+        return;
+    }
 
-let surat=document.getElementById("surat");
+    amplop.classList.add("buka");
 
+    setTimeout(function(){
 
+        surat.style.display = "block";
 
-amplop.classList.add("buka");
+        ketikPesan();
 
+        setTimeout(function(){
 
+            hadiahMuncul();
 
-setTimeout(function(){
+        },4000);
 
-
-surat.style.display="block";
-
-
-ketikPesan();
-
-
-
-setTimeout(function(){
-
-hadiahMuncul();
-
-},4000);
-
-
-
-},1000);
-
-
+    },1000);
 
 }
-
-
-
 
 
 // =======================
 // ISI SURAT MENGETIK
 // =======================
 
-
-let teks = 
-
-`Dear Nur Hafifah 💜
+let teks = `Dear Nur Hafifah 💜
 
 Selamat ulang tahun ke 20 tahun 🎂
 
@@ -417,159 +391,134 @@ dan semua impianmu bisa tercapai.
 
 Terus menjadi pribadi yang luar biasa ✨`;
 
-
-
 let index = 0;
-
 
 
 function ketikPesan(){
 
+    let tulisan = document.getElementById("pesan");
 
-let tulisan=document.getElementById("pesan");
+    if(tulisan){
 
+        tulisan.innerHTML = "";
 
-if(tulisan){
+        index = 0;
 
+        ketikMulai();
 
-tulisan.innerHTML="";
-
-index=0;
-
-
-ketikMulai();
-
+    }
 
 }
-
-
-}
-
 
 
 function ketikMulai(){
 
+    let tulisan = document.getElementById("pesan");
 
-let tulisan=document.getElementById("pesan");
+    if(tulisan && index < teks.length){
 
+        tulisan.innerHTML += teks.charAt(index);
 
-if(tulisan && index < teks.length){
+        index++;
 
+        setTimeout(ketikMulai,50);
 
-tulisan.innerHTML += teks.charAt(index);
-
-
-index++;
-
-
-setTimeout(ketikMulai,50);
-
+    }
 
 }
-
-
-}
-
-
-
 
 
 // =======================
 // HADIAH RAHASIA
 // =======================
 
-
 function hadiahMuncul(){
 
+    let surat = document.getElementById("surat");
 
-let surat=document.getElementById("surat");
+    if(surat){
 
+        surat.innerHTML += `
 
-if(surat){
+            <div class="hadiah" onclick="bukaHadiah()">
+                🎁
+            </div>
 
+            <p class="klik">
+                Klik hadiah untuk membuka kejutan 💜
+            </p>
 
-surat.innerHTML +=`
+            <div id="pesanHadiah"></div>
 
+        `;
 
-<div class="hadiah" onclick="bukaHadiah()">
-
-🎁
-
-</div>
-
-
-
-<p class="klik">
-
-Klik hadiah untuk membuka kejutan 💜
-
-</p>
-
-
-
-<div id="pesanHadiah"></div>
-
-
-`;
-
-
-}
-
-
-}
-function bukaHadiah(){
-
-
-let hadiah = document.querySelector(".hadiah");
-
-if(hadiah){
-    hadiah.classList.add("dibuka");
-}
-
-
-setTimeout(function(){
-
-    let pesan = document.getElementById("pesanHadiah");
-
-
-    if(!pesan){
-        return;
     }
 
-
-    pesan.innerHTML = `
-
-        <h2>
-            🎉 Kejutan Untuk Nur Hafifah 💜
-        </h2>
-
-        <p>
-            Semoga umur ke 20 tahun ini membawa banyak
-            kebahagiaan, kesuksesan, kesehatan,
-            dan cerita indah baru dalam hidupmu ✨
-        </p>
-
-        <p>
-            Tetap menjadi Nur Hafifah yang kuat,
-            baik hati, dan selalu percaya dengan
-            diri sendiri 💜
-        </p>
+}
 
 
-        <hr>
+// =======================
+// BUKA HADIAH
+// =======================
 
+function bukaHadiah(){
+
+    let hadiah = document.querySelector(".hadiah");
+
+    if(hadiah){
+        hadiah.classList.add("dibuka");
+    }
+
+    setTimeout(function(){
+
+        let pesan = document.getElementById("pesanHadiah");
+
+        if(!pesan){
+            return;
+        }
+
+        pesan.innerHTML = `
+
+            <h2>
+                🎉 Kejutan Untuk Nur Hafifah 💜
+            </h2>
+
+            <p>
+                Semoga umur ke 20 tahun ini membawa banyak
+                kebahagiaan, kesuksesan, kesehatan,
+                dan cerita indah baru dalam hidupmu ✨
+            </p>
+
+            <p>
+                Tetap menjadi Nur Hafifah yang kuat,
+                baik hati, dan selalu percaya dengan
+                diri sendiri 💜
+            </p>
+
+        `;
+
+    },800);
+
+}
+
+
+// =======================
+// UCAPAN UNTUK NUR HAFIFAH
+// =======================
+
+function tampilDaftarUcapan(){
+
+    document.getElementById("isi").innerHTML = `
 
         <div class="buku-ucapan">
 
             <h2>
-                💌 Ucapan & Doa
+                📖 Ucapan untuk Nur Hafifah
             </h2>
 
             <p>
-                Tulis ucapan dan doa terbaikmu
-                untuk Nur Hafifah 💜
+                Tulis ucapan dan doa terbaikmu untuk Nuyy 💜
             </p>
-
 
             <div class="form-ucapan">
 
@@ -581,9 +530,8 @@ setTimeout(function(){
 
                 <textarea
                     id="isiUcapan"
-                    placeholder="💌 Tulis ucapan untuk Hafifah..."
+                    placeholder="💌 Tulis ucapan untuk Nur Hafifah..."
                 ></textarea>
-
 
                 <button
                     type="button"
@@ -593,14 +541,15 @@ setTimeout(function(){
 
             </div>
 
-
             <div class="daftar-ucapan">
 
                 <h2>
-                    📖 Ucapan dari Teman
+                    💌 Ucapan yang Sudah Dikirim
                 </h2>
 
-                <div id="listUcapan"></div>
+                <div id="listUcapan">
+                    <p>Memuat ucapan... 💜</p>
+                </div>
 
             </div>
 
@@ -608,103 +557,202 @@ setTimeout(function(){
 
     `;
 
-
     document
-    .getElementById("tombolKirimUcapan")
-    .addEventListener("click", kirimUcapan);
+        .getElementById("tombolKirimUcapan")
+        .addEventListener("click", kirimUcapan);
 
-
-},800);
-
-
-}
-
-function kirimUcapan(){
-
-
-let namaInput = document.getElementById("namaUcapan");
-
-let ucapanInput = document.getElementById("isiUcapan");
-
-let listUcapan = document.getElementById("listUcapan");
-
-
-if(!namaInput || !ucapanInput || !listUcapan){
-
-    alert("Form ucapan belum siap 💜");
-
-    return;
+    tampilkanUcapanDariSupabase();
 
 }
 
 
-let nama = namaInput.value.trim();
+// =======================
+// KIRIM UCAPAN KE SUPABASE
+// =======================
 
-let ucapan = ucapanInput.value.trim();
+async function kirimUcapan(){
+
+    let namaInput =
+        document.getElementById("namaUcapan");
+
+    let ucapanInput =
+        document.getElementById("isiUcapan");
+
+    let listUcapan =
+        document.getElementById("listUcapan");
 
 
-if(nama === ""){
+    if(!namaInput || !ucapanInput || !listUcapan){
 
-    alert("Nama kamu belum diisi 💜");
+        alert("Form ucapan belum siap 💜");
 
-    namaInput.focus();
+        return;
 
-    return;
+    }
+
+
+    let nama = namaInput.value.trim();
+
+    let ucapan = ucapanInput.value.trim();
+
+
+    if(nama === ""){
+
+        alert("Nama kamu belum diisi 💜");
+
+        namaInput.focus();
+
+        return;
+
+    }
+
+
+    if(ucapan === ""){
+
+        alert("Ucapan kamu belum diisi 💌");
+
+        ucapanInput.focus();
+
+        return;
+
+    }
+
+
+    const { error } = await supabaseClient
+
+        .from("ucapan")
+
+        .insert([
+            {
+                nama: nama,
+                ucapan: ucapan
+            }
+        ]);
+
+
+    if(error){
+
+        console.error(error);
+
+        alert("Ucapan gagal dikirim. Coba lagi ya 💜");
+
+        return;
+
+    }
+
+
+    namaInput.value = "";
+
+    ucapanInput.value = "";
+
+
+    alert("💜 Ucapan berhasil dikirim!");
+
+    await tampilkanUcapanDariSupabase();
 
 }
 
 
-if(ucapan === ""){
+// =======================
+// TAMPILKAN UCAPAN DARI SUPABASE
+// =======================
 
-    alert("Ucapan kamu belum diisi 💌");
+async function tampilkanUcapanDariSupabase(){
 
-    ucapanInput.focus();
+    let listUcapan =
+        document.getElementById("listUcapan");
 
-    return;
+
+    if(!listUcapan){
+        return;
+    }
+
+
+    listUcapan.innerHTML =
+        "<p>Memuat ucapan... 💜</p>";
+
+
+    const { data, error } = await supabaseClient
+
+        .from("ucapan")
+
+        .select("id, created_at, nama, ucapan")
+
+        .order("created_at", {
+            ascending: false
+        });
+
+
+    if(error){
+
+        console.error(error);
+
+        listUcapan.innerHTML =
+            "<p>Ucapan belum bisa dimuat. 💜</p>";
+
+        return;
+
+    }
+
+
+    listUcapan.innerHTML = "";
+
+
+    if(!data || data.length === 0){
+
+        listUcapan.innerHTML =
+            "<p>Belum ada ucapan. Jadilah yang pertama 💌</p>";
+
+        return;
+
+    }
+
+
+    data.forEach(function(item){
+
+        let kartu =
+            document.createElement("div");
+
+        kartu.className =
+            "kartu-ucapan";
+
+
+        let namaTeman =
+            document.createElement("h3");
+
+        namaTeman.textContent =
+            "👤 " + item.nama;
+
+
+        let isiTeman =
+            document.createElement("p");
+
+        isiTeman.textContent =
+            item.ucapan;
+
+
+        let waktu =
+            document.createElement("div");
+
+        waktu.className =
+            "waktu-ucapan";
+
+        waktu.textContent =
+            "🕐 " +
+            new Date(item.created_at)
+            .toLocaleString("id-ID");
+
+
+        kartu.appendChild(namaTeman);
+
+        kartu.appendChild(isiTeman);
+
+        kartu.appendChild(waktu);
+
+
+        listUcapan.appendChild(kartu);
+
+    });
 
 }
 
-
-let kartu = document.createElement("div");
-
-kartu.className = "kartu-ucapan";
-
-
-let namaTeman = document.createElement("h3");
-
-namaTeman.textContent = "👤 " + nama;
-
-
-let isiTeman = document.createElement("p");
-
-isiTeman.textContent = ucapan;
-
-
-let waktu = document.createElement("div");
-
-waktu.className = "waktu-ucapan";
-
-waktu.textContent =
-    "🕐 " +
-    new Date().toLocaleString("id-ID");
-
-
-kartu.appendChild(namaTeman);
-
-kartu.appendChild(isiTeman);
-
-kartu.appendChild(waktu);
-
-
-listUcapan.prepend(kartu);
-
-
-namaInput.value = "";
-
-ucapanInput.value = "";
-
-
-alert("💜 Ucapan berhasil dikirim!");
-
-
-}
