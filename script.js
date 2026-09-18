@@ -153,7 +153,7 @@ function tampilGaleri() {
             </div>
 
             <div class="card">
-                <img src="img/poto20.jpeg">
+                <img src="img/poto20.jpeg.jpeg">
                 <p>💜 Kenangan 20</p>
             </div>
 
