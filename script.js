@@ -47,7 +47,6 @@ Semoga hari ini menjadi hari yang indah.
 }
 
 
-
 // =======================
 // GALERI
 // =======================
@@ -86,7 +85,6 @@ function tampilGaleri(){
             </div>
 
             <div class="card" onclick="besar(this)">
-                <!-- Titik sebelum jpg sudah diperbaiki -->
                 <img src="img/poto6.jpg" onerror="perbaikiGambar(this, 6)">
                 <p>🌸 Kenangan 6</p>
             </div>
@@ -209,6 +207,19 @@ function tampilGaleri(){
         </div>
 
     `;
+}
+
+// Fungsi otomatis mencoba ekstensi file lain jika gambar tidak muncul
+function perbaikiGambar(img, nomor) {
+    const formatCoba = ["jpeg", "jpg", "png", "webp", "JPG", "JPEG", "PNG"];
+    let step = parseInt(img.getAttribute("data-step") || "0");
+
+    if (step < formatCoba.length) {
+        img.setAttribute("data-step", step + 1);
+        img.src = `img/poto${nomor}.${formatCoba[step]}`;
+    } else {
+        img.onerror = null;
+    }
 }
 
 // Tambahkan fungsi ini tepat di bawah tampilGaleri
