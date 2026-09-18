@@ -58,38 +58,6 @@ html{
     z-index:0;
 
 }
-/* FOTO BESAR */
-
-.foto-besar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.85);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-    cursor:pointer;
-}
-
-.foto-besar img{
-    max-width:90%;
-    max-height:85%;
-    object-fit:contain;
-    border-radius:15px;
-    box-shadow:0 0 30px purple;
-}
-
-.foto-besar span{
-    position:absolute;
-    top:20px;
-    right:30px;
-    font-size:35px;
-    color:white;
-    cursor:pointer;
-}
 
 
 @keyframes twinkle{
@@ -317,14 +285,28 @@ h1{
 
 
 
-.card p{
+/* =================================
+   TULISAN / CAPTION FOTO
+================================= */
 
-    color:#7b2cbf;
+.card p {
+    margin: 10px 0 0 0;
 
-    font-weight:bold;
+    color: #000000;
 
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    /* GLOW PUTIH TIPIS */
+    text-shadow:
+        0 0 2px #ffffff,
+        0 0 4px #ffffff;
 }
-
 
 
 /* =========================
@@ -406,6 +388,9 @@ h1{
 button{
 
     cursor:pointer;
+
+}
+
 
 /* =========================
    ANIMASI GALERI TERBARU
@@ -550,61 +535,6 @@ button{
         opacity: 1;
         transform: translateY(0);
     }
-
-}
-/* =========================
-   WELCOME PAGE
-========================= */
-
-
-.welcome h1{
-
-    font-size:45px;
-
-    color:#ffb6e6;
-
-    text-shadow:
-    0 0 10px pink,
-    0 0 25px purple;
-
-}
-
-
-
-.welcome button{
-
-    margin-top:40px;
-
-    padding:15px 45px;
-
-    border:none;
-
-    border-radius:40px;
-
-    background:#9b00ff;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 0 20px purple;
-
-    transition:.3s;
-
-}
-
-
-
-.container button:hover{
-
-    background:#ff4fd8;
-
-    transform:scale(1.1);
-
-    box-shadow:0 0 30px pink;
 
 }
 /* =========================
@@ -991,23 +921,25 @@ transform:scale(1);
 
 .foto-profil{
 
-width:110px;
+    width:110px;
+    height:110px;
 
-height:110px;
+    object-fit:cover;
 
-object-fit:cover;
+    border-radius:50%;
 
-border-radius:50%;
+    border:4px solid #ffb6e6;
 
-border:4px solid #ffb6e6;
+    box-shadow:
+        0 0 15px purple;
 
-box-shadow:
-0 0 15px purple;
+    margin-top:15px;
 
-margin-top:15px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 
-animation:fotoMuncul 1.5s ease;
-
+    animation:munculProfil 1.5s ease;
 }
 
 
@@ -1143,6 +1075,7 @@ box-shadow:0 0 20px rgba(255,105,180,.4);
 }
 
 .buku-ucapan h2{
+
 
 
 color:#ffb6e6;
@@ -1774,54 +1707,240 @@ box-shadow:
 
 
 }
-/* =========================
-   ANIMASI FOTO GALERI
-========================= */
+/* =========================================
+   FOTO GALERI - BULAT
+========================================= */
 
-.galeri .card {
-    opacity: 0;
-    transform: translateY(60px);
-    animation: fotoMuncul 1s ease forwards;
+.card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    border: 3px solid rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 0 12px rgba(255,255,255,0.4),
+        0 0 25px rgba(155,0,255,0.35);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
 
-.galeri .card:nth-child(1) { animation-delay: 0s; }
-.galeri .card:nth-child(2) { animation-delay: 0.15s; }
-.galeri .card:nth-child(3) { animation-delay: 0.30s; }
-.galeri .card:nth-child(4) { animation-delay: 0.45s; }
-.galeri .card:nth-child(5) { animation-delay: 0.60s; }
-.galeri .card:nth-child(6) { animation-delay: 0.75s; }
-.galeri .card:nth-child(7) { animation-delay: 0.90s; }
-.galeri .card:nth-child(8) { animation-delay: 1.05s; }
-.galeri .card:nth-child(9) { animation-delay: 1.20s; }
-.galeri .card:nth-child(10) { animation-delay: 1.35s; }
-.galeri .card:nth-child(11) { animation-delay: 1.50s; }
-.galeri .card:nth-child(12) { animation-delay: 1.65s; }
-.galeri .card:nth-child(13) { animation-delay: 1.80s; }
-.galeri .card:nth-child(14) { animation-delay: 1.95s; }
-.galeri .card:nth-child(15) { animation-delay: 2.10s; }
-.galeri .card:nth-child(16) { animation-delay: 2.25s; }
-.galeri .card:nth-child(17) { animation-delay: 2.40s; }
-.galeri .card:nth-child(18) { animation-delay: 2.55s; }
-.galeri .card:nth-child(19) { animation-delay: 2.70s; }
-.galeri .card:nth-child(20) { animation-delay: 2.85s; }
-.galeri .card:nth-child(21) { animation-delay: 3.00s; }
-.galeri .card:nth-child(22) { animation-delay: 3.15s; }
-.galeri .card:nth-child(23) { animation-delay: 3.30s; }
-.galeri .card:nth-child(24) { animation-delay: 3.45s; }
-.galeri .card:nth-child(25) { animation-delay: 3.60s; }
-.galeri .card:nth-child(26) { animation-delay: 3.75s; }
-.galeri .card:nth-child(27) { animation-delay: 3.90s; }
-.galeri .card:nth-child(28) { animation-delay: 4.05s; }
-.galeri .card:nth-child(29) { animation-delay: 4.20s; }
 
-@keyframes fotoMuncul {
-    from {
+/* =========================================
+   TULISAN FOTO
+========================================= */
+
+.card p {
+    margin-top: 12px;
+
+    color: #000;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.card:hover img {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.7),
+        0 0 30px rgba(155,0,255,0.5);
+}
+
+
+/* =========================================
+   LAYAR SAAT FOTO DIKLIK
+========================================= */
+
+.foto-besar {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.80);
+
+    backdrop-filter: blur(3px);
+
+    z-index: 9999;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FOTO YANG KELUAR DARI LINGKARAN
+========================================= */
+
+.foto-besar img {
+
+    max-width: 88vw;
+    max-height: 82vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    /* TIDAK ADA KOTAK PUTIH */
+
+    border: none;
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.45),
+        0 0 40px rgba(155,0,255,0.55);
+
+    animation: fotoKeluar 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+
+}
+
+
+/* =========================================
+   ANIMASI FOTO
+   BULAT → KELUAR → FOTO ASLI
+========================================= */
+
+@keyframes fotoKeluar {
+
+    0% {
+
         opacity: 0;
-        transform: translateY(60px);
+
+        transform:
+            translateY(100px)
+            scale(0.15);
+
+        border-radius: 50%;
+
+        clip-path:
+            circle(50% at 50% 50%);
     }
 
-    to {
+
+    25% {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(40px)
+            scale(0.35);
+
+        border-radius: 50%;
+
+        clip-path:
+            circle(50% at 50% 50%);
     }
+
+
+    45% {
+
+        transform:
+            translateY(0)
+            scale(0.60);
+
+        border-radius: 50%;
+
+        clip-path:
+            circle(50% at 50% 50%);
+    }
+
+
+    65% {
+
+        transform:
+            translateY(0)
+            scale(0.82);
+
+        border-radius: 25px;
+
+        clip-path:
+            inset(5% 5% 5% 5% round 25px);
+    }
+
+
+    82% {
+
+        transform:
+            translateY(0)
+            scale(0.95);
+
+        border-radius: 18px;
+
+        clip-path:
+            inset(1% 1% 1% 1% round 18px);
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        border-radius: 12px;
+
+        clip-path:
+            inset(0 0 0 0 round 12px);
+    }
+
+}
+
+
+/* =========================================
+   TOMBOL X
+========================================= */
+
+.foto-besar span {
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    color: #000;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(255,255,255,0.5);
 }
