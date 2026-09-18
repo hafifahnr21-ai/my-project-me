@@ -50,189 +50,159 @@ Semoga hari ini menjadi hari yang indah.
 // =======================
 // GALERI
 // =======================
-
-function tampilGaleri(){
-
+function tampilGaleri() {
     document.getElementById("isi").innerHTML = `
-
         <h2>📷 Galeri Kenangan 💜</h2>
 
         <div class="galeri">
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto1.jpg" onerror="perbaikiGambar(this, 1)">
+            <div class="card">
+                <img src="img/poto1.jpg.jpg">
                 <p>💜 Kenangan 1</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto2.webp" onerror="perbaikiGambar(this, 2)">
-                <p>🌸 Kenangan 2</p>
+            <div class="card">
+                <img src="img/poto2.webp">
+                <p>💜 Kenangan 2</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto3.webp" onerror="perbaikiGambar(this, 3)">
+            <div class="card">
+                <img src="img/poto3.webp">
                 <p>💜 Kenangan 3</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto4.webp" onerror="perbaikiGambar(this, 4)">
-                <p>🌸 Kenangan 4</p>
+            <div class="card">
+                <img src="img/poto4.webp">
+                <p>💜 Kenangan 4</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto5.jpg" onerror="perbaikiGambar(this, 5)">
+            <div class="card">
+                <img src="img/poto5.jpg">
                 <p>💜 Kenangan 5</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto6.jpg" onerror="perbaikiGambar(this, 6)">
-                <p>🌸 Kenangan 6</p>
+            <div class="card">
+                <img src="img/poto6.jpg">
+                <p>💜 Kenangan 6</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto7.jpg" onerror="perbaikiGambar(this, 7)">
+            <div class="card">
+                <img src="img/poto7.jpg">
                 <p>💜 Kenangan 7</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto8.jpg" onerror="perbaikiGambar(this, 8)">
-                <p>🌸 Kenangan 8</p>
+            <div class="card">
+                <img src="img/poto8.jpg">
+                <p>💜 Kenangan 8</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto9.webp" onerror="perbaikiGambar(this, 9)">
+            <div class="card">
+                <img src="img/poto9.webp">
                 <p>💜 Kenangan 9</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto10.webp" onerror="perbaikiGambar(this, 10)">
-                <p>🌸 Kenangan 10</p>
+            <div class="card">
+                <img src="img/poto10.webp">
+                <p>💜 Kenangan 10</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto11.webp" onerror="perbaikiGambar(this, 11)">
+            <div class="card">
+                <img src="img/poto11.webp">
                 <p>💜 Kenangan 11</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto12.webp" onerror="perbaikiGambar(this, 12)">
-                <p>🌸 Kenangan 12</p>
+            <div class="card">
+                <img src="img/poto12.webp">
+                <p>💜 Kenangan 12</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto13.jpg" onerror="perbaikiGambar(this, 13)">
+            <div class="card">
+                <img src="img/poto13.jpg">
                 <p>💜 Kenangan 13</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto14.jpg" onerror="perbaikiGambar(this, 14)">
-                <p>🌸 Kenangan 14</p>
+            <div class="card">
+                <img src="img/poto14.jpg">
+                <p>💜 Kenangan 14</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto15.jpg" onerror="perbaikiGambar(this, 15)">
+            <div class="card">
+                <img src="img/poto15.jpg">
                 <p>💜 Kenangan 15</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto16.jpg" onerror="perbaikiGambar(this, 16)">
-                <p>🌸 Kenangan 16</p>
+            <div class="card">
+                <img src="img/poto16.jpg">
+                <p>💜 Kenangan 16</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto17.jpg" onerror="perbaikiGambar(this, 17)">
+            <div class="card">
+                <img src="img/poto17.jpg">
                 <p>💜 Kenangan 17</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto18.jpg" onerror="perbaikiGambar(this, 18)">
-                <p>🌸 Kenangan 18</p>
+            <div class="card">
+                <img src="img/poto18.jpg">
+                <p>💜 Kenangan 18</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto19.jpeg" onerror="perbaikiGambar(this, 19)">
+            <div class="card">
+                <img src="img/poto19.jpeg">
                 <p>💜 Kenangan 19</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto20.jpeg" onerror="perbaikiGambar(this, 20)">
-                <p>🌸 Kenangan 20</p>
+            <div class="card">
+                <img src="img/poto20.jpeg">
+                <p>💜 Kenangan 20</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto21.jpeg" onerror="perbaikiGambar(this, 21)">
+            <div class="card">
+                <img src="img/poto21.jpeg">
                 <p>💜 Kenangan 21</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto22.jpeg" onerror="perbaikiGambar(this, 22)">
-                <p>🌸 Kenangan 22</p>
+            <div class="card">
+                <img src="img/poto22.jpeg">
+                <p>💜 Kenangan 22</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto23.jpeg" onerror="perbaikiGambar(this, 23)">
+            <div class="card">
+                <img src="img/poto23.jpeg">
                 <p>💜 Kenangan 23</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto24.jpeg" onerror="perbaikiGambar(this, 24)">
-                <p>🌸 Kenangan 24</p>
+            <div class="card">
+                <img src="img/poto24.jpeg">
+                <p>💜 Kenangan 24</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto25.jpeg" onerror="perbaikiGambar(this, 25)">
+            <div class="card">
+                <img src="img/poto25.jpeg">
                 <p>💜 Kenangan 25</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto26.jpeg" onerror="perbaikiGambar(this, 26)">
-                <p>🌸 Kenangan 26</p>
+            <div class="card">
+                <img src="img/poto26.jpeg">
+                <p>💜 Kenangan 26</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto27.jpeg" onerror="perbaikiGambar(this, 27)">
+            <div class="card">
+                <img src="img/poto27.jpeg">
                 <p>💜 Kenangan 27</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto28.jpeg" onerror="perbaikiGambar(this, 28)">
-                <p>🌸 Kenangan 28</p>
+            <div class="card">
+                <img src="img/poto28.jpeg">
+                <p>💜 Kenangan 28</p>
             </div>
 
-            <div class="card" onclick="besar(this)">
-                <img src="img/poto29.jpeg" onerror="perbaikiGambar(this, 29)">
+            <div class="card">
+                <img src="img/poto29.jpeg">
                 <p>💜 Kenangan 29</p>
             </div>
 
         </div>
-
     `;
-}
-
-// Fungsi otomatis mencoba ekstensi file lain jika gambar tidak muncul
-function perbaikiGambar(img, nomor) {
-    const formatCoba = ["jpeg", "jpg", "png", "webp", "JPG", "JPEG", "PNG"];
-    let step = parseInt(img.getAttribute("data-step") || "0");
-
-    if (step < formatCoba.length) {
-        img.setAttribute("data-step", step + 1);
-        img.src = `img/poto${nomor}.${formatCoba[step]}`;
-    } else {
-        img.onerror = null;
-    }
-}
-
-// Tambahkan fungsi ini tepat di bawah tampilGaleri
-function perbaikiGambar(img, nomor) {
-    const formatCoba = ["jpeg", "jpg", "png", "webp", "JPG", "JPEG", "PNG"];
-    let step = parseInt(img.getAttribute("data-step") || "0");
-
-    if (step < formatCoba.length) {
-        img.setAttribute("data-step", step + 1);
-        img.src = `img/poto${nomor}.${formatCoba[step]}`;
-    } else {
-        img.onerror = null;
-    }
 }
 // =======================
 // FOTO BESAR
