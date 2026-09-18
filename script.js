@@ -61,32 +61,32 @@ function tampilGaleri(){
         <div class="galeri">
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto1.jpg.jpg">
+                <img src="img/poto1.jpg">
                 <p>💜 Kenangan 1</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto2.webp.webp">
+                <img src="img/poto2.webp">
                 <p>🌸 Kenangan 2</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto3.webp.webp">
+                <img src="img/poto3.webp">
                 <p>💜 Kenangan 3</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto4.webp.webp">
+                <img src="img/poto4.webp">
                 <p>🌸 Kenangan 4</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto5.jpg.jpg">
+                <img src="img/poto5.jpg">
                 <p>💜 Kenangan 5</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto6jpg.jpg">
+                <img src="img/poto6jpg">
                 <p>🌸 Kenangan 6</p>
             </div>
 
@@ -121,87 +121,87 @@ function tampilGaleri(){
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto13.jpg.jpg">
+                <img src="img/poto13.jpg">
                 <p>💜 Kenangan 13</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto14.jpg.jpg">
+                <img src="img/poto14.jpg">
                 <p>🌸 Kenangan 14</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto15.jpg.jpg">
+                <img src="img/poto15.jpg">
                 <p>💜 Kenangan 15</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto16.jpg.jpg">
+                <img src="img/poto16.jpg">
                 <p>🌸 Kenangan 16</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto17.jpg.jpg">
+                <img src="img/poto17.jpg">
                 <p>💜 Kenangan 17</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto18.jpg.jpg">
+                <img src="img/poto18.jpg">
                 <p>🌸 Kenangan 18</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto19.jpeg.jpeg">
+                <img src="img/poto19.jpeg">
                 <p>💜 Kenangan 19</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto20.jpeg.jpeg">
+                <img src="img/poto20.jpeg">
                 <p>🌸 Kenangan 20</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto21.jpeg.jpeg">
+                <img src="img/poto21.jpeg">
                 <p>💜 Kenangan 21</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto22.jpeg.jpeg">
+                <img src="img/poto22.jpeg">
                 <p>🌸 Kenangan 22</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto23.jpeg.jpeg">
+                <img src="img/poto23.jpeg">
                 <p>💜 Kenangan 23</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto24.jpeg.jpeg">
+                <img src="img/poto24.jpeg">
                 <p>🌸 Kenangan 24</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto25.jpeg.jpeg">
+                <img src="img/poto25.jpeg">
                 <p>💜 Kenangan 25</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto26.jpeg.jpeg">
+                <img src="img/poto26.jpeg">
                 <p>🌸 Kenangan 26</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto27.jpeg.jpeg">
+                <img src="img/poto27.jpeg">
                 <p>💜 Kenangan 27</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto28.jpeg.jpeg">
+                <img src="img/poto28.jpeg">
                 <p>🌸 Kenangan 28</p>
             </div>
 
             <div class="card" onclick="besar(this)">
-                <img src="img/poto29.jpeg.jpeg">
+                <img src="img/poto29.jpeg">
                 <p>💜 Kenangan 29</p>
             </div>
 
