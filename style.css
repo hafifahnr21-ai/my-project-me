@@ -1,409 +1,368 @@
-/* =========================
+```css
+/* =====================================================
    DASAR WEBSITE
-========================= */
+===================================================== */
 
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-body{
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto;
 
-    margin:0;
-    padding:0;
-
-    min-height:100vh;
-
-    overflow-y:auto;
-
-    background:linear-gradient(
+    background: linear-gradient(
         135deg,
         #14001f,
         #4a148c
     );
 
-    color:white;
-
-    font-family:'Segoe UI', sans-serif;
-
+    color: white;
+    font-family: "Segoe UI", sans-serif;
 }
 
 
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-
-/* =========================
+/* =====================================================
    BINTANG BACKGROUND
-========================= */
+===================================================== */
 
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-.stars{
-
-    position:fixed;
-
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
     background-image:
-    radial-gradient(white 2px, transparent 2px);
+        radial-gradient(
+            white 2px,
+            transparent 2px
+        );
 
-    background-size:80px 80px;
+    background-size: 80px 80px;
 
-    animation:twinkle 3s infinite;
+    animation: twinkle 3s infinite;
 
-    z-index:0;
+    z-index: 0;
+    pointer-events: none;
+}
 
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
 }
 
 
-@keyframes twinkle{
-
-    0%{
-        opacity:.3;
-    }
-
-    50%{
-        opacity:1;
-    }
-
-    100%{
-        opacity:.3;
-    }
-
-}
-
-
-/* =========================
+/* =====================================================
    CONTAINER
-========================= */
+===================================================== */
 
+.container {
+    text-align: center;
 
-.container{
+    position: relative;
 
-    text-align:center;
+    z-index: 2;
 
-    position:relative;
+    animation: naik 1.8s ease-out;
+}
 
-    z-index:2;
+@keyframes naik {
 
-    animation:naik 1.8s ease-out;
+    from {
+        transform: translateY(250px);
+        opacity: 0;
+    }
 
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 
-@keyframes naik{
-
-    from{
-
-        transform:translateY(250px);
-
-        opacity:0;
-
-    }
-
-
-    to{
-
-        transform:translateY(0);
-
-        opacity:1;
-
-    }
-
-}
-
-
-/* =========================
+/* =====================================================
    JUDUL
-========================= */
+===================================================== */
 
+h1 {
+    font-size: 30px;
 
-h1{
-
-    font-size:30px;
-
-    color:#ffb6e6;
+    color: #ffb6e6;
 
     text-shadow:
-
-    0 0 5px pink,
-
-    0 0 15px purple;
-
+        0 0 5px pink,
+        0 0 15px purple;
 }
 
 
-/* =========================
+/* =====================================================
    MENU
-========================= */
+===================================================== */
 
+.menu {
+    margin-top: 30px;
 
-.menu{
+    display: flex;
 
-    margin-top:30px;
+    justify-content: center;
 
-    display:flex;
+    gap: 15px;
 
-    justify-content:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
+    flex-wrap: wrap;
 }
 
+.menu button {
+    padding: 12px 25px;
 
-.menu button{
+    border: none;
 
-    padding:12px 25px;
+    border-radius: 30px;
 
-    border:none;
+    background: #9b00ff;
 
-    border-radius:30px;
+    color: white;
 
-    background:#9b00ff;
+    font-size: 17px;
 
-    color:white;
+    cursor: pointer;
 
-    font-size:17px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-    box-shadow:0 0 15px purple;
-
-}
-
-
-.menu button:hover{
-
-    transform:scale(1.08);
-
-    background:#ff4fd8;
-
-}
-
-
-
-/* =========================
-   ISI HALAMAN
-========================= */
-
-
-#isi{
-
-    margin-top:40px;
-
-    padding:30px;
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-    color:white;
-
-    font-size:20px;
-
-}
-
-
-/* =========================
-   GALERI
-========================= */
-
-
-.galeri{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-
-    margin-top:40px;
-
-    padding-bottom:50px;
-
-}
-
-
-
-.card{
-
-    background:white;
-
-    padding:15px;
-
-    border-radius:20px;
-
-    text-align:center;
+    transition: 0.3s;
 
     box-shadow:
+        0 0 15px purple;
+}
 
-    0 10px 25px rgba(0,0,0,.3);
+.menu button:hover {
+    transform: scale(1.08);
 
-    transition:.4s;
-
+    background: #ff4fd8;
 }
 
 
+/* =====================================================
+   ISI HALAMAN
+===================================================== */
 
-.card:hover{
+#isi {
+    margin-top: 40px;
 
+    padding: 30px;
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   GALERI
+   FOTO TAMPIL UTUH
+===================================================== */
+
+.galeri {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 28px;
+
+    margin-top: 40px;
+
+    padding-bottom: 80px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   KARTU FOTO
+===================================================== */
+
+.galeri .card {
+    width: 100%;
+
+    background: transparent;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    /*
+       PENTING:
+       Jangan hidden karena bisa memotong
+       bagian foto saat animasi.
+    */
+    overflow: visible;
+
+    box-shadow: none;
+
+    opacity: 0;
+
+    transform: translateY(100px);
+
+    animation:
+        fotoTimbul 0.9s ease forwards;
+}
+
+
+/* =====================================================
+   FOTO GALERI
+   FOTO TIDAK DIPOTONG
+===================================================== */
+
+.galeri .card img {
+    display: block;
+
+    width: 100%;
+
+    /*
+       PENTING:
+       height auto membuat foto mengikuti
+       ukuran/aspect ratio aslinya.
+    */
+    height: auto;
+
+    /*
+       Jangan gunakan object-fit: cover
+       karena cover akan memotong foto.
+    */
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    border:
+        3px solid
+        rgba(255, 255, 255, 0.85);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.35),
+
+        0 0 15px
+        rgba(155, 0, 255, 0.35);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =====================================================
+   HOVER FOTO
+===================================================== */
+
+.galeri .card:hover img {
     transform:
+        translateY(-6px)
+        scale(1.02);
 
-    translateY(-10px)
-    scale(1.03);
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.45),
 
+        0 0 25px
+        rgba(155, 0, 255, 0.6);
 }
 
 
-
-.card img{
-
-    width:100%;
-
-    height:230px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    cursor:pointer;
-
-}
-
-
-
-/* =================================
+/* =====================================================
    TULISAN / CAPTION FOTO
-================================= */
+===================================================== */
 
-.card p {
-    margin: 10px 0 0 0;
+.galeri .card p {
+    margin:
+        10px 0 5px;
 
     color: #000000;
 
     font-size: 15px;
+
     font-weight: 600;
 
     text-align: center;
 
     opacity: 1;
+
     visibility: visible;
 
-    /* GLOW PUTIH TIPIS */
     text-shadow:
-        0 0 2px #ffffff,
-        0 0 4px #ffffff;
+        0 0 2px white,
+        0 0 4px white;
 }
 
 
-/* =========================
-   FOTO BESAR
-========================= */
+/* =====================================================
+   ANIMASI FOTO TIMBUL DARI BAWAH
+===================================================== */
 
+@keyframes fotoTimbul {
 
-#popup{
+    0% {
+        opacity: 0;
 
-    display:none;
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-
-    background:
-    rgba(0,0,0,.85);
-
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:1000;
-
-}
-
-
-
-#gambarBesar{
-
-    max-width:80%;
-
-    max-height:80%;
-
-    border-radius:20px;
-
-    animation:zoomFoto .5s ease;
-
-}
-
-
-
-@keyframes zoomFoto{
-
-    from{
-
-        transform:scale(.5);
-
-        opacity:0;
-
+        transform:
+            translateY(100px)
+            scale(0.90);
     }
 
+    60% {
+        opacity: 1;
 
-    to{
-
-        transform:scale(1);
-
-        opacity:1;
-
+        transform:
+            translateY(-8px)
+            scale(1.02);
     }
 
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
 }
 
 
-
-/* =========================
-   TOMBOL UMUM
-========================= */
-
-
-button{
-
-    cursor:pointer;
-
-}
-
-
-/* =========================
-   ANIMASI GALERI TERBARU
-========================= */
-
-.galeri .card {
-    opacity: 0;
-    transform: translateY(60px);
-    animation: fotoMasuk 0.8s ease forwards;
-}
-
-
-/* FOTO MUNCUL BERURUTAN */
+/* =====================================================
+   FOTO MUNCUL BERURUTAN
+===================================================== */
 
 .galeri .card:nth-child(1) {
     animation-delay: 0.1s;
@@ -522,1425 +481,944 @@ button{
 }
 
 
-/* GERAKAN FOTO */
-
-@keyframes fotoMasuk {
-
-    from {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-/* =========================
-   WELCOME PAGE
-========================= */
-
-
-.welcome h1{
-
-    font-size:45px;
-
-    color:#ffb6e6;
-
-    text-shadow:
-    0 0 10px pink,
-    0 0 25px purple;
-
-}
-
-
-
-.welcome button{
-
-    margin-top:40px;
-
-    padding:15px 45px;
-
-    border:none;
-
-    border-radius:40px;
-
-    background:#9b00ff;
-
-    color:white;
-
-    font-size:22px;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 0 20px purple;
-
-    transition:.3s;
-
-}
-
-
-
-.container button:hover{
-
-    background:#ff4fd8;
-
-    transform:scale(1.1);
-
-    box-shadow:0 0 30px pink;
-
-}
-/* PERBAIKAN TOMBOL MASUK WELCOME */
-
-.container button{
-
-    margin-top:40px;
-
-    padding:15px 45px;
-
-    border:none;
-
-    border-radius:35px;
-
-    background:#9b00ff;
-
-    color:white;
-
-    font-size:22px;
-
-    box-shadow:0 0 20px purple;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-}
-
-
-.container button:hover{
-
-    background:#ff4fd8;
-
-    transform:scale(1.1);
-
-}
-/* =====================
-   AMPOP ULANG TAHUN
-===================== */
-
-.amplop{
-
-    width:280px;
-
-    height:180px;
-
-    background:#d90429;
-
-    margin:50px auto;
-
-    position:relative;
-
-    border-radius:15px;
-
-    cursor:pointer;
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,0.4);
-
-    overflow:hidden;
-
-    transition:0.8s;
-
-}
-
-
-/* bagian depan amplop */
-
-.isi-amplop{
-
-    width:100%;
-
-    height:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:70px;
-
-}
-
-
-
-/* lipatan atas amplop */
-
-.tutup-amplop{
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:0;
-
-    height:0;
-
-    border-left:140px solid transparent;
-
-    border-right:140px solid transparent;
-
-    border-top:100px solid #ff4d6d;
-
-    transform-origin:top;
-
-    transition:1s;
-
-    z-index:2;
-
-}
-
-
-/* animasi membuka */
-
-.amplop.buka .tutup-amplop{
-
-    transform:rotateX(180deg);
-
-}
-
-
-/* sedikit naik saat terbuka */
-
-.amplop.buka{
-
-    transform:translateY(-20px);
-
-}
-
-
-
-/* tulisan klik */
-
-.klik{
-
-    text-align:center;
-
-    color:#ffd6ff;
-
-    font-size:20px;
-
-}
-
-
-
-/* =====================
-   KERTAS SURAT
-===================== */
-
-
-.surat{
-
-    display:none;
-
-    background:#fff8e7;
-
-    color:#4a235a;
-
-    max-width:700px;
-
-    margin:40px auto;
-
-    padding:40px;
-
-    border-radius:10px;
-
-    box-shadow:
-    0 15px 40px rgba(0,0,0,.4);
-
-    animation:suratMuncul 1s ease;
-
-}
-
-
-
-.surat h2{
-
-    text-align:center;
-
-    color:#9b00ff;
-
-}
-
-
-
-#pesan{
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    white-space:pre-line;
-
-}
-
-
-
-@keyframes suratMuncul{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px) scale(.8);
-
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0) scale(1);
-
-    }
-
-}
-/* =====================
-   HADIAH RAHASIA
-===================== */
-
-
-.hadiah{
-
-font-size:100px;
-
-text-align:center;
-
-margin-top:40px;
-
-cursor:pointer;
-
-transition:.8s;
-
-animation:loncat 1.5s infinite;
-
-}
-
-
-
-.hadiah:hover{
-
-transform:scale(1.2);
-
-}
-
-
-
-.dibuka{
-
-transform:
-scale(1.5)
-rotate(20deg);
-
-opacity:0;
-
-}
-
-
-
-@keyframes loncat{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-20px);
-
-}
-
-
-}
-
-
-
-#pesanHadiah{
-
-background:rgba(255,255,255,.15);
-
-padding:30px;
-
-border-radius:20px;
-
-text-align:center;
-
-margin-top:30px;
-
-animation:munculSurprise 1s;
-
-}
-
-
-
-@keyframes munculSurprise{
-
-
-from{
-
-opacity:0;
-
-transform:scale(.5);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-
-}
-/* =========================
-   TENTANG AKU - DIARY STYLE
-========================= */
-
-
-.foto-profil{
-
-    width:110px;
-    height:110px;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    border:4px solid #ffb6e6;
-
-    box-shadow:
-        0 0 15px purple;
-
-    margin-top:15px;
-
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-
-    animation:munculProfil 1.5s ease;
-}
-
-
-
-.profil h2{
-
-    color:#ffb6e6;
-
-    font-size:35px;
-
-    text-shadow:
-    0 0 10px pink;
-
-}
-
-
-
-.profil h3{
-
-    color:#ffd6ff;
-
-    font-size:25px;
-
-}
-
-
-
-.cerita,
-.data-diri,
-.kesukaan{
-
-    background:rgba(0,0,0,0.25);
-
-    margin-top:25px;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    text-align:left;
-
-    line-height:1.8;
-
-    box-shadow:
-    0 0 15px rgba(255,105,180,0.4);
-
-}
-
-
-
-.cerita p,
-.data-diri p,
-.kesukaan p{
-
-    color:white;
-
-    font-size:18px;
-
-}
-
-
-
-.data-diri h3,
-.kesukaan h3{
-
-    text-align:center;
-
-    color:#ffb6e6;
-
-}
-
-
-
-.penutup{
-
-    margin-top:30px;
-
-    color:#ffe6ff;
-
-    font-size:18px;
-
-    font-style:italic;
-
-    line-height:1.7;
-
-}
-
-
-
-@keyframes munculProfil{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-}
-
-/* =========================
-BUKU TAMU UCAPAN
-========================= */
-
-.buku-ucapan{
-
-
-max-width:800px;
-
-margin:40px auto;
-
-padding:30px;
-
-background:rgba(0,0,0,0.25);
-
-border-radius:25px;
-
-box-shadow:0 0 20px rgba(255,105,180,.4);
-
-
-}
-
-.buku-ucapan h2{
-
-
-
-color:#ffb6e6;
-
-text-shadow:0 0 10px pink;
-
-
-}
-
-.form-ucapan{
-
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-margin-top:25px;
-
-
-}
-
-.form-ucapan input,
-.form-ucapan textarea{
-
-
-width:100%;
-
-padding:15px;
-
-border:none;
-
-border-radius:15px;
-
-outline:none;
-
-font-size:16px;
-
-font-family:'Segoe UI', sans-serif;
-
-
-}
-
-.form-ucapan textarea{
-
-
-min-height:120px;
-
-resize:vertical;
-
-
-}
-
-.form-ucapan button{
-
-
-padding:13px;
-
-border:none;
-
-border-radius:25px;
-
-background:#9b00ff;
-
-color:white;
-
-font-size:17px;
-
-cursor:pointer;
-
-box-shadow:0 0 15px purple;
-
-transition:.3s;
-
-
-}
-
-.form-ucapan button:hover{
-
-
-background:#ff4fd8;
-
-transform:scale(1.03);
-
-
-}
-
-.daftar-ucapan{
-
-
-margin-top:40px;
-
-
-}
-
-.kartu-ucapan{
-
-
-background:rgba(255,255,255,.12);
-
-margin-top:20px;
-
-padding:20px;
-
-border-radius:20px;
-
-text-align:left;
-
-border-left:4px solid #ffb6e6;
-
-animation:munculUcapan .6s ease;
-
-}
-
-.kartu-ucapan h3{
-
-
-margin-top:0;
-
-color:#ffb6e6;
-
-
-}
-
-.kartu-ucapan p{
-
-
-color:white;
-
-line-height:1.7;
-
-white-space:pre-line;
-
-
-}
-
-.waktu-ucapan{
-
-
-font-size:13px;
-
-color:#e9baff;
-
-
-}
-
-@keyframes munculUcapan{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-}
-/* =========================
-BUKU TAMU UCAPAN
-========================= */
-
-.buku-ucapan{
-
-max-width:800px;
-
-margin:40px auto;
-
-padding:35px;
-
-background:rgba(255,255,255,0.92);
-
-border-radius:25px;
-
-box-shadow:
-    0 15px 40px rgba(0,0,0,0.5);
-
-color:#4a235a;
-
-
-}
-
-/* JUDUL */
-
-.buku-ucapan h2{
-
-
-color:#7b2cbf;
-
-font-size:28px;
-
-text-shadow:none;
-
-margin-bottom:15px;
-
-
-}
-
-/* DESKRIPSI */
-
-.buku-ucapan > p{
-
-
-color:#5a3d63;
-
-font-size:17px;
-
-
-}
-
-/* FORM */
-
-.form-ucapan{
-
-
-display:flex;
-
-flex-direction:column;
-
-gap:15px;
-
-margin-top:25px;
-
-
-}
-
-/* INPUT & TEXTAREA */
-
-.form-ucapan input,
-.form-ucapan textarea{
-
-
-width:100%;
-
-padding:15px 18px;
-
-border:2px solid #d8b4e8;
-
-border-radius:15px;
-
-outline:none;
-
-background:#fff;
-
-color:#3d2445;
-
-font-size:16px;
-
-font-family:'Segoe UI',sans-serif;
-
-
-}
-
-.form-ucapan input::placeholder,
-.form-ucapan textarea::placeholder{
-
-
-color:#8a6a91;
-
-
-}
-
-/* SAAT DIKLIK */
-
-.form-ucapan input:focus,
-.form-ucapan textarea:focus{
-
-
-border-color:#9b00ff;
-
-box-shadow:
-    0 0 10px rgba(155,0,255,.25);
-
-
-}
-
-/* TEXTAREA */
-
-.form-ucapan textarea{
-
-
-min-height:130px;
-
-resize:vertical;
-
-
-}
-
-/* TOMBOL */
-
-.form-ucapan button{
-
-
-padding:14px;
-
-border:none;
-
-border-radius:25px;
-
-background:#9b00ff;
-
-color:white;
-
-font-size:17px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-box-shadow:0 5px 15px rgba(155,0,255,.4);
-
-transition:.3s;
-
-
-}
-
-.form-ucapan button:hover{
-
-
-background:#ff4fd8;
-
-transform:translateY(-2px);
-
-
-}
-
-/* DAFTAR UCAPAN */
-
-.daftar-ucapan{
-
-
-margin-top:40px;
-
-
-}
-
-.daftar-ucapan h2{
-
-
-color:#7b2cbf;
-
-text-align:center;
-
-border-bottom:2px solid #e4c5ed;
-
-padding-bottom:15px;
-
-
-}
-
-/* KARTU UCAPAN */
-
-.kartu-ucapan{
-
-
-background:#faf4ff;
-
-margin-top:20px;
-
-padding:20px;
-
-border-radius:18px;
-
-text-align:left;
-
-border-left:5px solid #9b00ff;
-
-box-shadow:
-    0 5px 15px rgba(0,0,0,.12);
-
-animation:munculUcapan .6s ease;
-
-
-}
-
-/* NAMA */
-
-.kartu-ucapan h3{
-
-
-margin-top:0;
-
-color:#7b2cbf;
-
-font-size:19px;
-
-
-}
-
-/* ISI UCAPAN */
-
-.kartu-ucapan p{
-
-
-color:#3d2445;
-
-line-height:1.7;
-
-font-size:16px;
-
-white-space:pre-line;
-
-
-}
-
-/* WAKTU */
-
-.waktu-ucapan{
-
-
-margin-top:10px;
-
-font-size:13px;
-
-color:#8a6a91;
-
-
-}
-
-@keyframes munculUcapan{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-}
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-}
-
-/* =========================
-UNDANGAN ULANG TAHUN
-========================= */
-
-.welcome{
-
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:30px;
-
-
-}
-
-.undangan{
-
-
-width:90%;
-
-max-width:600px;
-
-padding:45px 35px;
-
-background:rgba(255,255,255,0.10);
-
-border:2px solid rgba(255,182,230,0.5);
-
-border-radius:30px;
-
-box-shadow:
-    0 0 30px rgba(255,105,180,.3),
-    inset 0 0 30px rgba(255,255,255,.05);
-
-backdrop-filter:blur(8px);
-
-
-}
-
-.label-undangan{
-
-
-color:#ffd6ff;
-
-font-size:18px;
-
-letter-spacing:3px;
-
-margin-bottom:25px;
-
-
-}
-
-.undangan h1{
-
-
-font-size:42px;
-
-margin:10px 0;
-
-color:#ffb6e6;
-
-
-}
-
-.undangan h2{
-
-
-font-size:36px;
-
-margin:10px 0 20px;
-
-color:white;
-
-text-shadow:
-    0 0 10px pink,
-    0 0 20px purple;
-
-
-}
-
-.garis{
-
-
-color:#ffb6e6;
-
-font-size:20px;
-
-letter-spacing:8px;
-
-margin:20px 0;
-
-
-}
-
-.isi-undangan{
-
-
-color:#fff0ff;
-
-font-size:18px;
-
-line-height:1.8;
-
-
-}
-
-.umur{
-
-
-margin-top:25px;
-
-color:#ffb6e6;
-
-font-size:24px;
-
-font-weight:bold;
-
-
-}
-
-.tanggal{
-
-
-color:#ead1ff;
-
-font-size:16px;
-
-margin-top:5px;
-
-
-}
-
-.tombol-mulai{
-
-
-margin-top:30px !important;
-
-padding:14px 45px !important;
-
-border:none;
-
-border-radius:35px;
-
-background:#9b00ff;
-
-color:white;
-
-font-size:20px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-box-shadow:
-    0 0 20px purple;
-
-transition:.3s;
-
-
-}
-
-.tombol-mulai:hover{
-
-
-background:#ff4fd8;
-
-transform:scale(1.08);
-
-box-shadow:
-    0 0 30px pink;
-
-
-}
-/* =========================================
-   FOTO GALERI - BULAT
-========================================= */
-
-.card img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-
-    border-radius: 50%;
-    cursor: pointer;
-
-    border: 3px solid rgba(255,255,255,0.8);
-
-    box-shadow:
-        0 0 12px rgba(255,255,255,0.4),
-        0 0 25px rgba(155,0,255,0.35);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-
-/* =========================================
-   TULISAN FOTO
-========================================= */
-
-.card p {
-    margin-top: 12px;
-
-    color: #000;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    text-shadow:
-        0 0 2px #fff,
-        0 0 4px #fff;
-
-    opacity: 1;
-    visibility: visible;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.card:hover img {
-    transform: scale(1.08);
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.7),
-        0 0 30px rgba(155,0,255,0.5);
-}
-
-
-/* =========================================
-   LAYAR SAAT FOTO DIKLIK
-========================================= */
-
-.foto-besar {
+/* =====================================================
+   POPUP FOTO LAMA
+   TETAP DIPERTAHANKAN
+===================================================== */
+
+#popup {
+    display: none;
 
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
 
-    display: flex;
+    background:
+        rgba(0, 0, 0, 0.85);
+
     justify-content: center;
+
     align-items: center;
 
-    background: rgba(0,0,0,0.80);
-
-    backdrop-filter: blur(3px);
-
-    z-index: 9999;
+    z-index: 1000;
 
     cursor: pointer;
 }
 
+#gambarBesar {
+    max-width: 85%;
 
-/* =========================================
-   FOTO YANG KELUAR DARI LINGKARAN
-========================================= */
-
-.foto-besar img {
-
-    max-width: 88vw;
-    max-height: 82vh;
-
-    width: auto;
-    height: auto;
+    max-height: 85%;
 
     object-fit: contain;
 
-    /* TIDAK ADA KOTAK PUTIH */
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 25px
+        rgba(155, 0, 255, 0.6);
+
+    animation:
+        zoomFoto 0.5s ease;
+}
+
+@keyframes zoomFoto {
+
+    from {
+        transform: scale(0.5);
+
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+/* =====================================================
+   TOMBOL UMUM
+===================================================== */
+
+button {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   WELCOME PAGE
+===================================================== */
+
+.welcome {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+.undangan {
+    width: 90%;
+
+    max-width: 600px;
+
+    padding: 45px 35px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border:
+        2px solid
+        rgba(255, 182, 230, 0.5);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 105, 180, 0.3),
+
+        inset 0 0 30px
+        rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(8px);
+}
+
+.label-undangan {
+    color: #ffd6ff;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.undangan h1 {
+    font-size: 42px;
+
+    margin: 10px 0;
+
+    color: #ffb6e6;
+}
+
+.undangan h2 {
+    font-size: 36px;
+
+    margin: 10px 0 20px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px pink,
+        0 0 20px purple;
+}
+
+.garis {
+    color: #ffb6e6;
+
+    font-size: 20px;
+
+    letter-spacing: 8px;
+
+    margin: 20px 0;
+}
+
+.isi-undangan {
+    color: #fff0ff;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.umur {
+    margin-top: 25px;
+
+    color: #ffb6e6;
+
+    font-size: 24px;
+
+    font-weight: bold;
+}
+
+.tanggal {
+    color: #ead1ff;
+
+    font-size: 16px;
+
+    margin-top: 5px;
+}
+
+.tombol-mulai {
+    margin-top: 30px !important;
+
+    padding: 14px 45px !important;
 
     border: none;
 
-    box-shadow:
-        0 0 20px rgba(255,255,255,0.45),
-        0 0 40px rgba(155,0,255,0.55);
+    border-radius: 35px;
 
-    animation: fotoKeluar 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+    background: #9b00ff;
 
-}
-
-
-/* =========================================
-   ANIMASI FOTO
-   BULAT → KELUAR → FOTO ASLI
-========================================= */
-
-@keyframes fotoKeluar {
-
-    0% {
-
-        opacity: 0;
-
-        transform:
-            translateY(100px)
-            scale(0.15);
-
-        border-radius: 50%;
-
-        clip-path:
-            circle(50% at 50% 50%);
-    }
-
-
-    25% {
-
-        opacity: 1;
-
-        transform:
-            translateY(40px)
-            scale(0.35);
-
-        border-radius: 50%;
-
-        clip-path:
-            circle(50% at 50% 50%);
-    }
-
-
-    45% {
-
-        transform:
-            translateY(0)
-            scale(0.60);
-
-        border-radius: 50%;
-
-        clip-path:
-            circle(50% at 50% 50%);
-    }
-
-
-    65% {
-
-        transform:
-            translateY(0)
-            scale(0.82);
-
-        border-radius: 25px;
-
-        clip-path:
-            inset(5% 5% 5% 5% round 25px);
-    }
-
-
-    82% {
-
-        transform:
-            translateY(0)
-            scale(0.95);
-
-        border-radius: 18px;
-
-        clip-path:
-            inset(1% 1% 1% 1% round 18px);
-    }
-
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
-        border-radius: 12px;
-
-        clip-path:
-            inset(0 0 0 0 round 12px);
-    }
-
-}
-
-
-/* =========================================
-   TOMBOL X
-========================================= */
-
-.foto-besar span {
-
-    position: absolute;
-
-    top: 20px;
-    right: 25px;
-
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.9);
-
-    color: #000;
+    color: white;
 
     font-size: 20px;
+
     font-weight: bold;
 
     cursor: pointer;
 
     box-shadow:
-        0 0 8px rgba(255,255,255,0.5);
+        0 0 20px purple;
+
+    transition: 0.3s;
 }
+
+.tombol-mulai:hover {
+    background: #ff4fd8;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px pink;
+}
+
+
+/* =====================================================
+   TOMBOL WELCOME LAMA
+===================================================== */
+
+.container button {
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #ff4fd8;
+
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   AMPLOP ULANG TAHUN
+===================================================== */
+
+.amplop {
+    width: 280px;
+
+    height: 180px;
+
+    background: #d90429;
+
+    margin: 50px auto;
+
+    position: relative;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0, 0, 0, 0.4);
+
+    overflow: hidden;
+
+    transition: 0.8s;
+}
+
+
+/* =====================================================
+   BAGIAN DEPAN AMPLOP
+===================================================== */
+
+.isi-amplop {
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+}
+
+
+/* =====================================================
+   LIPATAN ATAS AMPLOP
+===================================================== */
+
+.tutup-amplop {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left:
+        140px solid transparent;
+
+    border-right:
+        140px solid transparent;
+
+    border-top:
+        100px solid #ff4d6d;
+
+    transform-origin: top;
+
+    transition: 1s;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   AMPLOP DIBUKA
+===================================================== */
+
+.amplop.buka .tutup-amplop {
+    transform: rotateX(180deg);
+}
+
+.amplop.buka {
+    transform: translateY(-20px);
+}
+
+
+/* =====================================================
+   TULISAN KLIK
+===================================================== */
+
+.klik {
+    text-align: center;
+
+    color: #ffd6ff;
+
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   KERTAS SURAT
+===================================================== */
+
+.surat {
+    display: none;
+
+    background: #fff8e7;
+
+    color: #4a235a;
+
+    max-width: 700px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.4);
+
+    animation:
+        suratMuncul 1s ease;
+}
+
+.surat h2 {
+    text-align: center;
+
+    color: #9b00ff;
+}
+
+#pesan {
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+}
+
+@keyframes suratMuncul {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   HADIAH RAHASIA
+===================================================== */
+
+.hadiah {
+    font-size: 100px;
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    cursor: pointer;
+
+    transition: 0.8s;
+
+    animation:
+        loncat 1.5s infinite;
+}
+
+.hadiah:hover {
+    transform: scale(1.2);
+}
+
+.dibuka {
+    transform:
+        scale(1.5)
+        rotate(20deg);
+
+    opacity: 0;
+}
+
+@keyframes loncat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-20px);
+    }
+}
+
+#pesanHadiah {
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    animation:
+        munculSurprise 1s;
+}
+
+@keyframes munculSurprise {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* =====================================================
+   TENTANG AKU
+===================================================== */
+
+.foto-profil {
+    width: 110px;
+
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        4px solid #ffb6e6;
+
+    box-shadow:
+        0 0 15px purple;
+
+    margin-top: 15px;
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    animation:
+        munculProfil 1.5s ease;
+}
+
+.profil h2 {
+    color: #ffb6e6;
+
+    font-size: 35px;
+
+    text-shadow:
+        0 0 10px pink;
+}
+
+.profil h3 {
+    color: #ffd6ff;
+
+    font-size: 25px;
+}
+
+.cerita,
+.data-diri,
+.kesukaan {
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 0 15px
+        rgba(255, 105, 180, 0.4);
+}
+
+.cerita p,
+.data-diri p,
+.kesukaan p {
+    color: white;
+
+    font-size: 18px;
+}
+
+.data-diri h3,
+.kesukaan h3 {
+    text-align: center;
+
+    color: #ffb6e6;
+}
+
+.penutup {
+    margin-top: 30px;
+
+    color: #ffe6ff;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    line-height: 1.7;
+}
+
+@keyframes munculProfil {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   BUKU TAMU UCAPAN
+===================================================== */
+
+.buku-ucapan {
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    padding: 35px;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.5);
+
+    color: #4a235a;
+}
+
+
+/* =====================================================
+   JUDUL BUKU UCAPAN
+===================================================== */
+
+.buku-ucapan h2 {
+    color: #7b2cbf;
+
+    font-size: 28px;
+
+    text-shadow: none;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   DESKRIPSI
+===================================================== */
+
+.buku-ucapan > p {
+    color: #5a3d63;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   FORM UCAPAN
+===================================================== */
+
+.form-ucapan {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   INPUT DAN TEXTAREA
+===================================================== */
+
+.form-ucapan input,
+.form-ucapan textarea {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border:
+        2px solid #d8b4e8;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background: white;
+
+    color: #3d2445;
+
+    font-size: 16px;
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+}
+
+.form-ucapan input::placeholder,
+.form-ucapan textarea::placeholder {
+    color: #8a6a91;
+}
+
+
+/* =====================================================
+   FOCUS INPUT
+===================================================== */
+
+.form-ucapan input:focus,
+.form-ucapan textarea:focus {
+    border-color: #9b00ff;
+
+    box-shadow:
+        0 0 10px
+        rgba(155, 0, 255, 0.25);
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.form-ucapan textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* =====================================================
+   TOMBOL FORM
+===================================================== */
+
+.form-ucapan button {
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #9b00ff;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(155, 0, 255, 0.4);
+
+    transition: 0.3s;
+}
+
+.form-ucapan button:hover {
+    background: #ff4fd8;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   DAFTAR UCAPAN
+===================================================== */
+
+.daftar-ucapan {
+    margin-top: 40px;
+}
+
+.daftar-ucapan h2 {
+    color: #7b2cbf;
+
+    text-align: center;
+
+    border-bottom:
+        2px solid #e4c5ed;
+
+    padding-bottom: 15px;
+}
+
+
+/* =====================================================
+   KARTU UCAPAN
+===================================================== */
+
+.kartu-ucapan {
+    background: #faf4ff;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    border-left:
+        5px solid #9b00ff;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.12);
+
+    animation:
+        munculUcapan 0.6s ease;
+}
+
+
+/* =====================================================
+   NAMA UCAPAN
+===================================================== */
+
+.kartu-ucapan h3 {
+    margin-top: 0;
+
+    color: #7b2cbf;
+
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   ISI UCAPAN
+===================================================== */
+
+.kartu-ucapan p {
+    color: #3d2445;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    white-space: pre-line;
+}
+
+
+/* =====================================================
+   WAKTU UCAPAN
+===================================================== */
+
+.waktu-ucapan {
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    color: #8a6a91;
+}
+
+@keyframes munculUcapan {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu button {
+        padding: 10px 15px;
+
+        font-size: 14px;
+    }
+
+    #isi {
+        width: 95%;
+
+        padding: 15px;
+
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       GALERI HP
+    ========================= */
+
+    .galeri {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+        padding-bottom: 80px;
+    }
+
+    .galeri .card {
+        overflow: visible;
+    }
+
+    .galeri .card img {
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+    }
+
+    .galeri .card p {
+        font-size: 13px;
+
+        margin-top: 8px;
+    }
+
+
+    /* =========================
+       WELCOME
+    ========================= */
+
+    .welcome {
+        padding: 20px;
+    }
+
+    .undangan {
+        padding: 35px 20px;
+    }
+
+    .undangan h1 {
+        font-size: 32px;
+    }
+
+    .undangan h2 {
+        font-size: 28px;
+    }
+
+    .isi-undangan {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       BUKU UCAPAN
+    ========================= */
+
+    .buku-ucapan {
+        padding: 22px;
+    }
+}
+
